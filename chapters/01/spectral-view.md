@@ -2,7 +2,7 @@
 
 ## UV Absorbance Curve
 
-In the spectral view of UV absorbance data, they are called absorbance curves. To the best of our knowleged, there are no usable models[^1] for them, while ... at least for amino acids.
+In the spectral view of UV absorbance data, they are called absorbance curves. To the best of our knowledge, there are no usable models[^1] for them, while ... at least for amino acids.
 
 ## X-ray Scattering Curve
 
