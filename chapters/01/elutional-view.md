@@ -10,6 +10,10 @@ Concerning the tendency of entering pores, smaller particles are like curious ch
 SEC-SAXS Animation (Elutional View)
 ```
 
+```{note}
+Do not take this animation seriously since it lacks precision and may still include some minor bugs.
+```
+
 [^1]: In this animation, brighter sectors in circles are meant to be the pores.
 
 [^2]: In reality, there are some due gaps between the column bottom and the measuring devices.
