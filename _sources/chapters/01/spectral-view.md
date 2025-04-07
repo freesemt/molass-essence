@@ -13,7 +13,7 @@ In SAXS theory, it is known that a detector image is a spherical average of squa
 ```{figure} ../../_static/images/saxs_illust.png
 :name: saxs_illustration
 
-SAXS Illustraion through Fourier Transform of an Ellipsoid
+SAXS Illustraion through Fourier Transform of a homogeneous Ellipsoid
 ```
 
 [^1]: `Molass Library` currently does not directly utilize this relation, while `DENSS` {cite:p}`Grant:2018` is an excellent application of its smart use, from which we learned coding for the figure.
