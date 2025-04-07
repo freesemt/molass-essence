@@ -16,4 +16,4 @@ Do not take this animation seriously since it lacks precision and may still incl
 
 [^1]: In this animation, brighter sectors in circles are meant to be the pores.
 
-[^2]: In reality, there are some due gaps between the column bottom and the measuring devices.
+[^2]: In reality, there are some due gaps, which are ignored, between the column bottom and the measuring devices.
