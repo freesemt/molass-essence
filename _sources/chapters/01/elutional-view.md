@@ -11,7 +11,7 @@ SEC-SAXS Animation (Elutional View)
 ```
 
 ```{note}
-Do not take this animation seriously since it lacks precision and may still include some minor bugs.
+Do not take this animation seriously, since it lacks precision and may still include some minor bugs.
 ```
 
 [^1]: In this animation, brighter sectors in circles are meant to be the pores.
