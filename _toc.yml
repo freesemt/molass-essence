@@ -8,6 +8,15 @@ options:
 chapters:
 - file: chapters/01/data-illust
   title: Data Illustration
+  sections:
+  - file: chapters/01/experiments
+    title: SEC-SAXS Experiments
+  - file: chapters/01/3d-view
+    title: 3D View
+  - file: chapters/01/elutional-view
+    title: Elutional View
+  - file: chapters/01/spectral-view
+    title: Spectral View
 - file: chapters/03/matrices
   title: Matrices from Curves
 - file: chapters/04/lowrank
