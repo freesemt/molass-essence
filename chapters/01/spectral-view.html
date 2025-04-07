@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -384,14 +384,16 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="spectral-view">
 <h1><span class="section-number">1.4. </span>Spectral View<a class="headerlink" href="#spectral-view" title="Link to this heading">#</a></h1>
+<p>Let us first take a look at curves …</p>
 <section id="uv-absorbance-curve">
 <h2><span class="section-number">1.4.1. </span>UV Absorbance Curve<a class="headerlink" href="#uv-absorbance-curve" title="Link to this heading">#</a></h2>
-<p>In the spectral view of UV absorbance data, they are called absorbance curves. To the best of our knowledge, there are no usable models<a class="footnote-reference brackets" href="#id3" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a> for them, while … at least for amino acids.</p>
+<p>In the spectral view of UV absorbance data, they are called absorbance curves.</p>
+<p>To the best of our knowledge, no usable models are available for them<a class="footnote-reference brackets" href="#id4" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a>, while some computational chemistry packages<a class="footnote-reference brackets" href="#id5" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a> seem to be able to produce them at least for amino acids.</p>
 </section>
 <section id="x-ray-scattering-curve">
 <h2><span class="section-number">1.4.2. </span>X-ray Scattering Curve<a class="headerlink" href="#x-ray-scattering-curve" title="Link to this heading">#</a></h2>
-<p>In the spectral (or angular) view of X-ray scattering data, they are called scattering curves. Here is an example of simplest case below.</p>
-<p>In SAXS theory, it is known that a detector image is a spherical average of squared absolute values of Fourier transform of an object, which is represented in electron density.<a class="footnote-reference brackets" href="#id4" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a> These four related sets of data are depicted in the following firure, in case where the particle shape is equally an ellipsoid.</p>
+<p>In the spectral (or angular) view of X-ray scattering data, they are called scattering curves.</p>
+<p>Here is an example of simplest case below. In SAXS theory, it is known that a detector image is a spherical average of squared absolute values of Fourier transform of an object, which is represented in electron density.<a class="footnote-reference brackets" href="#id6" id="id3" role="doc-noteref"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></a> These four related sets of data are depicted in the following firure, in case where the particle shape is equally an ellipsoid.</p>
 <figure class="align-default" id="saxs-illustration">
 <img alt="../../_images/saxs_illust.png" src="../../_images/saxs_illust.png" />
 <figcaption>
@@ -400,13 +402,17 @@ document.write(`
 </figure>
 <hr class="footnotes docutils" />
 <aside class="footnote-list brackets">
-<aside class="footnote brackets" id="id3" role="doc-footnote">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">1</a><span class="fn-bracket">]</span></span>
-<p>in the sense that you can use on personal computers.</p>
-</aside>
 <aside class="footnote brackets" id="id4" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">1</a><span class="fn-bracket">]</span></span>
+<p>in the sense that you can use easily on personal computers.</p>
+</aside>
+<aside class="footnote brackets" id="id5" role="doc-footnote">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">2</a><span class="fn-bracket">]</span></span>
-<p><code class="docutils literal notranslate"><span class="pre">Molass</span> <span class="pre">Library</span></code> currently does not directly utilize this relation, while <code class="docutils literal notranslate"><span class="pre">DENSS</span></code> <span id="id5">[<a class="reference internal" href="../90/references.html#id4" title="Thomas D. Grant. Ab initio electron density determination directly from solution scattering data. Nature Methods, 15(3):191-193, Mar 2018. URL: https://doi.org/10.1038/nmeth.4581, doi:10.1038/nmeth.4581.">Gra18</a>]</span> is an excellent application of its smart use, from which we learned coding for the figure.</p>
+<p>Psi4, PySCF, etc.</p>
+</aside>
+<aside class="footnote brackets" id="id6" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id3">3</a><span class="fn-bracket">]</span></span>
+<p><code class="docutils literal notranslate"><span class="pre">Molass</span> <span class="pre">Library</span></code> currently does not directly utilize this relation, while <code class="docutils literal notranslate"><span class="pre">DENSS</span></code> <span id="id7">[<a class="reference internal" href="../90/references.html#id4" title="Thomas D. Grant. Ab initio electron density determination directly from solution scattering data. Nature Methods, 15(3):191-193, Mar 2018. URL: https://doi.org/10.1038/nmeth.4581, doi:10.1038/nmeth.4581.">Gra18</a>]</span> is an excellent application of its smart use, from which we learned coding for the figure.</p>
 </aside>
 </aside>
 </section>
