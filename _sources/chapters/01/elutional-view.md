@@ -1,5 +1,11 @@
 # Elutional View
 
+```{figure} ../../_static/images/trimmed_ssd_icurves.png
+:name: ssd_icurves
+
+Elution Curves
+```
+
 It could be said as chromatographic since it depicts the separative nature of chromatography. In the animation below, particles of three different sizes, distinguished with colors, are injected at the top of column and flow downward with some of them taking occasional rests in the pores[^1] of fixed substance.
 
 Concerning the tendency of entering pores, smaller particles are like curious children while larger ones are like unconcerned adults. As a result, the larger hurries faster to the bottom of column, where concetraion of the particles is measured by both UV absorbance and X-ray scattering.[^2]

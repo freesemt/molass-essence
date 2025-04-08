@@ -2,6 +2,12 @@
 
 Let us first take a look at curves ...
 
+```{figure} ../../_static/images/trimmed_ssd_jcurves.png
+:name: ssd_jcurves
+
+Spectral Curves
+```
+
 ## UV Absorbance Curve
 
 In the spectral view of UV absorbance data, they are called absorbance curves. 
