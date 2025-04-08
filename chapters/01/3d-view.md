@@ -4,7 +4,7 @@
 Since the data are measured in two different ways, namely by UV absorbance and X-ray scattering, they can be expressed as a whole in 3D plots as follows.
 
 
-```{figure} ../../_static/images/corrected_ssd_3d.png
+```{figure} ../../_static/images/trimmed_ssd_3d.png
 :name: three_d_view_of_the_data
 
 3D view of SEC-SAXS data
