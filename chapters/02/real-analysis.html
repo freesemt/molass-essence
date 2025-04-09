@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>11.2. Stochastic Models &#8212; Molass Library Essense</title>
+    <title>2. Real Analysis &#8212; Molass Library Essense</title>
   
   
   
@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -57,12 +57,12 @@
     <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'chapters/11/stochastic';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'chapters/02/real-analysis';</script>
     <link rel="icon" href="../../_static/molamola.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="11.3. Kinetic Models" href="kinetic.html" />
-    <link rel="prev" title="11.1. Classical Models" href="classical.html" />
+    <link rel="next" title="3. Matrices from Curves" href="../03/matrices.html" />
+    <link rel="prev" title="1.4. Spectral View" href="../01/spectral-view.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -188,7 +188,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../01/spectral-view.html">1.4. Spectral View</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1"><a class="reference internal" href="../02/real-analysis.html">2. Real Analysis</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">2. Real Analysis</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../03/matrices.html">3. Matrices from Curves</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../04/lowrank.html">4. Low Rank Factorization</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../05/mp-inverse.html">5. Moore-Penrose Inverse</a></li>
@@ -197,10 +197,10 @@
 <li class="toctree-l1"><a class="reference internal" href="../08/saxs-basics.html">8. SAXS Basics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../09/scattering_models.html">9. Scattering Curve Models</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../10/chromat-basics.html">10. Chromatography Basics</a></li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="elution_models.html">11. Elution Curve Models</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="classical.html">11.1. Classical Models</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">11.2. Stochastic Models</a></li>
-<li class="toctree-l2"><a class="reference internal" href="kinetic.html">11.3. Kinetic Models</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../11/elution_models.html">11. Elution Curve Models</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../11/classical.html">11.1. Classical Models</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../11/stochastic.html">11.2. Stochastic Models</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../11/kinetic.html">11.3. Kinetic Models</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1"><a class="reference internal" href="../12/interparticle.html">12. Interparticle Effects</a></li>
@@ -276,7 +276,7 @@
       
       
       
-      <li><a href="../../_sources/chapters/11/stochastic.ipynb" target="_blank"
+      <li><a href="../../_sources/chapters/02/real-analysis.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -286,7 +286,7 @@
 <span class="btn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="btn__text-container">.ipynb</span>
+<span class="btn__text-container">.md</span>
 </a>
 </li>
       
@@ -358,7 +358,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Stochastic Models</h1>
+    <h1>Real Analysis</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -372,8 +372,21 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="stochastic-models">
-<h1><span class="section-number">11.2. </span>Stochastic Models<a class="headerlink" href="#stochastic-models" title="Link to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="real-analysis">
+<h1><span class="section-number">2. </span>Real Analysis<a class="headerlink" href="#real-analysis" title="Link to this heading">#</a></h1>
+<p>In this book, the order of description is chosen for the ease of theoretical understanding, and is not the same as that of real analysis procedure. To make that diffence clearer, we give here a brief description of the latter, as well as to declare the current coverage of <code class="docutils literal notranslate"><span class="pre">Molass</span> <span class="pre">Library</span></code> there.</p>
+<p>Analysis of SEC-SAXS experiment data involves several steps. To list a simplest course for discussion here:</p>
+<ol class="arabic simple">
+<li><p>Circular Average</p></li>
+<li><p>Background Subtraction</p></li>
+<li><p>Trimming</p></li>
+<li><p>Baseline Correcction</p></li>
+<li><p>Low Rank Factorization</p></li>
+<li><p>Rg Estimation - Guinier Plot [&#64;Guinier_1939]</p></li>
+<li><p>Shape Inspection - Kratky Plot [&#64;Kratky_1963]</p></li>
+<li><p>Electron Density Estimation</p></li>
+</ol>
+<p>among which <code class="docutils literal notranslate"><span class="pre">Molass</span> <span class="pre">Library</span></code> currently supports only steps 3-7. For the first two steps, <code class="docutils literal notranslate"><span class="pre">SAngler</span></code> [&#64;Shimizu:2016] can be used, while <code class="docutils literal notranslate"><span class="pre">DENSS</span></code> [&#64;Grant:2018] is available for the last. For all those steps, there already exist alternative software tools with various coverage. The most comprehensive and popular tool is <code class="docutils literal notranslate"><span class="pre">ATSAS</span></code> [&#64;Manalastas-Cantos:ge5081], which is proprietary (closed-source) and consists of a standard SAXS suite of command line interface programs for each responsible step, coupled with GUI programs for them. Other tools include <code class="docutils literal notranslate"><span class="pre">BioXTAS</span> <span class="pre">RAW</span></code> [&#64;Hopkins:jl5075], which is an open-source GUI application for running such executable modular programs, some of which are open-source and others of which include the ATSAS suite. In such a semi-closed state of tools for SEC-SAXS experiments, <code class="docutils literal notranslate"><span class="pre">Molass</span> <span class="pre">Library</span></code> is expected to help researchers better understand, improve, and utilize their tools by making larger part of the tools more open and flexible together with the Python ecosystem.</p>
 </section>
 
     <script type="text/x-thebe-config">
@@ -389,7 +402,7 @@ document.write(`
         },
         kernelOptions: {
             name: "python3",
-            path: "./chapters\11"
+            path: "./chapters\02"
         },
         predefinedOutput: true
     }
@@ -407,20 +420,20 @@ document.write(`
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="classical.html"
+       href="../01/spectral-view.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">11.1. </span>Classical Models</p>
+        <p class="prev-next-title"><span class="section-number">1.4. </span>Spectral View</p>
       </div>
     </a>
     <a class="right-next"
-       href="kinetic.html"
+       href="../03/matrices.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">11.3. </span>Kinetic Models</p>
+        <p class="prev-next-title"><span class="section-number">3. </span>Matrices from Curves</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>

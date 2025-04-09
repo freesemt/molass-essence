@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>3. Low Rank Factorization &#8212; Molass Library Essense</title>
+    <title>4. Low Rank Factorization &#8212; Molass Library Essense</title>
   
   
   
@@ -63,8 +63,8 @@
     <link rel="icon" href="../../_static/molamola.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="4. Moore-Penrose Inverse" href="../05/mp-inverse.html" />
-    <link rel="prev" title="2. Matrices from Curves" href="../03/matrices.html" />
+    <link rel="next" title="5. Moore-Penrose Inverse" href="../05/mp-inverse.html" />
+    <link rel="prev" title="3. Matrices from Curves" href="../03/matrices.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -190,24 +190,25 @@
 <li class="toctree-l2"><a class="reference internal" href="../01/spectral-view.html">1.4. Spectral View</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1"><a class="reference internal" href="../03/matrices.html">2. Matrices from Curves</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">3. Low Rank Factorization</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../05/mp-inverse.html">4. Moore-Penrose Inverse</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../06/svd.html">5. Singular Value Decomposition</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../07/optimization.html">6. Optimization</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../08/saxs-basics.html">7. SAXS Basics</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../09/scattering_models.html">8. Scattering Curve Models</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../10/chromat-basics.html">9. Chromatography Basics</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../11/elution_models.html">10. Elution Curve Models</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../11/classical.html">10.1. Classical Models</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../11/stochastic.html">10.2. Stochastic Models</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../11/kinetic.html">10.3. Kinetic Models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../02/real-analysis.html">2. Real Analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../03/matrices.html">3. Matrices from Curves</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">4. Low Rank Factorization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../05/mp-inverse.html">5. Moore-Penrose Inverse</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../06/svd.html">6. Singular Value Decomposition</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../07/optimization.html">7. Optimization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../08/saxs-basics.html">8. SAXS Basics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../09/scattering_models.html">9. Scattering Curve Models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../10/chromat-basics.html">10. Chromatography Basics</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../11/elution_models.html">11. Elution Curve Models</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../11/classical.html">11.1. Classical Models</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../11/stochastic.html">11.2. Stochastic Models</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../11/kinetic.html">11.3. Kinetic Models</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1"><a class="reference internal" href="../12/interparticle.html">11. Interparticle Effects</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../13/baseline.html">12. Baseline Models</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../14/errors.html">13. Error Porpagation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../90/references.html">14. References</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../12/interparticle.html">12. Interparticle Effects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../13/baseline.html">13. Baseline Models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../14/errors.html">14. Error Porpagation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../90/references.html">15. References</a></li>
 </ul>
 
     </div>
@@ -374,7 +375,7 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="low-rank-factorization">
-<h1><span class="section-number">3. </span>Low Rank Factorization<a class="headerlink" href="#low-rank-factorization" title="Link to this heading">#</a></h1>
+<h1><span class="section-number">4. </span>Low Rank Factorization<a class="headerlink" href="#low-rank-factorization" title="Link to this heading">#</a></h1>
 <p>Among the above mentioned steps, Low Rank Factorization<a class="footnote-reference brackets" href="#id12" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a> using elution curve models is the most distinctive feature of <code class="docutils literal notranslate"><span class="pre">Molass</span> <span class="pre">Library</span></code>. It is directly related to the decomposition of species contained in the sample, which is first attained physically by the Size Exclusion Chromatography, followed by logical estimation and optimization of the software. When the chromatographic peaks are sufficiently separated, the decomposition is relatively simple. Otherwise, i.e., when the peaks overlap widely, it becomes challenging due to underdeterminedness<a class="footnote-reference brackets" href="#id13" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a> from noise, the handling of which is beyond the scope of this paper and possibly might be studied using the future versions of this library.</p>
 <p>Here, we decribe the essense of easier part to give a basic idea of what it is all about. For discussion, it is convenient to use matrices. Ideally, then, the decomposition should be expressed as follows:</p>
 <div class="math notranslate nohighlight">
@@ -458,7 +459,7 @@ document.write(`
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">2. </span>Matrices from Curves</p>
+        <p class="prev-next-title"><span class="section-number">3. </span>Matrices from Curves</p>
       </div>
     </a>
     <a class="right-next"
@@ -466,7 +467,7 @@ document.write(`
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">4. </span>Moore-Penrose Inverse</p>
+        <p class="prev-next-title"><span class="section-number">5. </span>Moore-Penrose Inverse</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
