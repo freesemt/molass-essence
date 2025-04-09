@@ -22,7 +22,7 @@ The modeling of them is currently beyond our reach because, to the best of our k
 
 In the spectral (or angular) view of X-ray scattering data, they are called scattering curves. 
 
-To give a theoretical flavor, here is an example of simplest case. In SAXS theory, it is known that a detector image is a spherical average of squared absolute values of Fourier transform of an object, which is represented in electron density.[^3] These four related sets of data are depicted in the following firure, in case where the particle shape is equally an ellipsoid.
+To give a theoretical flavor a little, here is an example of simplest case. In SAXS theory, it is known that a detector image is a spherical average of squared absolute values of Fourier transform of an object, which is represented in electron density.[^3] These four related sets of data are depicted in the following firure, in case where the particle shape is equally an ellipsoid.
 
 ```{figure} ../../_static/images/saxs_illust.png
 :name: saxs_illustration
