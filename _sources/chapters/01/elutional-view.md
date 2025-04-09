@@ -12,7 +12,7 @@ It could be said as chromatographic since it depicts the separative nature of ch
 
 Concerning the tendency of entering pores, smaller particles are like curious children while larger ones are like unconcerned adults. As a result, the larger hurry faster to the bottom of column, where concetraion of the particles is measured by both UV absorbance and X-ray scattering.[^2]
 
-<video width="100%" controls>
+<video width="100%" controls autoplay>
 <source src="../../_static/animations/sec-saxs.mp4" type="video/mp4">
 </video>
 
