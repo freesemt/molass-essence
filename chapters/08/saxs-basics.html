@@ -347,7 +347,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
 </div></div>
       
     </div>
@@ -363,6 +365,14 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mathematical-relation-between-an-object-and-its-scattering-curve">8.1. Mathematical Relation between an Object and its Scattering Curve</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -374,6 +384,43 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="saxs-basics">
 <h1><span class="section-number">8. </span>SAXS Basics<a class="headerlink" href="#saxs-basics" title="Link to this heading">#</a></h1>
+<section id="mathematical-relation-between-an-object-and-its-scattering-curve">
+<h2><span class="section-number">8.1. </span>Mathematical Relation between an Object and its Scattering Curve<a class="headerlink" href="#mathematical-relation-between-an-object-and-its-scattering-curve" title="Link to this heading">#</a></h2>
+<p>In a real experiment, scaterred X-ray intensities are measured using a detector,
+which produces data to be circular-averaged into a scaterring curve.</p>
+<p>Mathematically, these are related by a Fourier transform between an electron density space
+and its reciprocal space whose spherical average correspond to the scattering curve.</p>
+<p>This relation is depicted below using SAXS simulator in the Molass Library.</p>
+<p>We take this relation for granted in this book and will not give details any further.</p>
+<p>See <span id="id1">[<a class="reference internal" href="../90/references.html#id27" title="L.A. Feigin and D.I. Svergun. Structure Analysis by Small-Angle X-Ray and Neutron Scattering. Springer US, 1987. ISBN 9780306426292. URL: https://books.google.co.jp/books?id=q0iqQgAACAAJ.">FS87</a>]</span>, <span id="id2">[<a class="reference internal" href="../90/references.html#id28" title="Dmitri I. Svergun, Michel H. J. Koch, Peter A. Timmins, and Roland P. May. Small Angle X-Ray and Neutron Scattering from Solutions of Biological Macromolecules. Oxford University Press, 08 2013. ISBN 9780199639533. URL: https://doi.org/10.1093/acprof:oso/9780199639533.001.0001, doi:10.1093/acprof:oso/9780199639533.001.0001.">SKTM13</a>]</span> or <span id="id3">[<a class="reference internal" href="../90/references.html#id29" title="Eaton E. Lattman, Thomas D. Grant, and Edward H. Snell. Biological Small Angle Scattering: Theory and Practice. Oxford University Press, 07 2018. ISBN 9780199670871. URL: https://doi.org/10.1093/oso/9780199670871.001.0001, doi:10.1093/oso/9780199670871.001.0001.">LGS18</a>]</span> for details.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sys</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="sa">r</span><span class="s2">&quot;D:\Github\molass-library&quot;</span><span class="p">)</span>
+<span class="kn">from</span> <span class="nn">molass</span> <span class="kn">import</span> <span class="n">get_version</span>
+<span class="k">assert</span> <span class="n">get_version</span><span class="p">(</span><span class="n">toml_only</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="s2">&quot;0.0.9&quot;</span><span class="p">,</span> <span class="s2">&quot;Please update molass to the latest version&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">molass.SAXS.Simulator</span> <span class="kn">import</span> <span class="n">ElectronDensitySpace</span>
+
+<span class="n">N</span><span class="o">=</span> <span class="mi">32</span>
+<span class="n">density</span> <span class="o">=</span> <span class="n">ElectronDensitySpace</span><span class="p">(</span><span class="n">N</span><span class="o">=</span><span class="n">N</span><span class="p">)</span>
+<span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span> <span class="o">=</span> <span class="n">density</span><span class="o">.</span><span class="n">get_meshgrid</span><span class="p">()</span>
+<span class="n">c</span> <span class="o">=</span> <span class="n">N</span><span class="o">//</span><span class="mi">2</span>
+<span class="n">density</span><span class="o">.</span><span class="n">draw_saxs</span><span class="p">((</span><span class="n">x</span> <span class="o">-</span> <span class="n">c</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="p">(</span><span class="n">y</span> <span class="o">-</span> <span class="n">c</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="p">(</span><span class="n">z</span> <span class="o">-</span> <span class="n">c</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/bae6b6aab977166bc1da4d756a9cd872463dcf6fb595cec234a3a75c7cd7392c.png" src="../../_images/bae6b6aab977166bc1da4d756a9cd872463dcf6fb595cec234a3a75c7cd7392c.png" />
+</div>
+</div>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -430,6 +477,21 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mathematical-relation-between-an-object-and-its-scattering-curve">8.1. Mathematical Relation between an Object and its Scattering Curve</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
