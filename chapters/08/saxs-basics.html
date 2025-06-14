@@ -370,7 +370,7 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mathematical-relation-between-an-object-and-its-scattering-curve">8.1. Mathematical Relation between an Object and its Scattering Curve</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mathematical-relation-between-particles-and-its-scattering-curve">8.1. Mathematical Relation between Particles and its Scattering Curve</a></li>
 </ul>
             </nav>
         </div>
@@ -384,15 +384,21 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="saxs-basics">
 <h1><span class="section-number">8. </span>SAXS Basics<a class="headerlink" href="#saxs-basics" title="Link to this heading">#</a></h1>
-<section id="mathematical-relation-between-an-object-and-its-scattering-curve">
-<h2><span class="section-number">8.1. </span>Mathematical Relation between an Object and its Scattering Curve<a class="headerlink" href="#mathematical-relation-between-an-object-and-its-scattering-curve" title="Link to this heading">#</a></h2>
-<p>In a real experiment, scaterred X-ray intensities are measured using a detector,
+<section id="mathematical-relation-between-particles-and-its-scattering-curve">
+<h2><span class="section-number">8.1. </span>Mathematical Relation between Particles and its Scattering Curve<a class="headerlink" href="#mathematical-relation-between-particles-and-its-scattering-curve" title="Link to this heading">#</a></h2>
+<p>In a real experiment, X-rays are radiated at particles
+and scaterred X-ray intensities are measured using a detector,
 which produces data to be circular-averaged into a scaterring curve.</p>
-<p>Mathematically, these are related by a Fourier transform between an electron density space
-and its reciprocal space whose spherical average correspond to the scattering curve.</p>
+<p>Mathematically, this expriment is expressed by some data sets
+which are related by a Fourier transform between an electron density space and its reciprocal space,
+where the spherical average of reciprocal space corresponds to the scattering curve.</p>
 <p>This relation is depicted below using SAXS simulator in the Molass Library.</p>
-<p>We take this relation for granted in this book and will not give details any further.</p>
-<p>See <span id="id1">[<a class="reference internal" href="../90/references.html#id27" title="L.A. Feigin and D.I. Svergun. Structure Analysis by Small-Angle X-Ray and Neutron Scattering. Springer US, 1987. ISBN 9780306426292. URL: https://books.google.co.jp/books?id=q0iqQgAACAAJ.">FS87</a>]</span>, <span id="id2">[<a class="reference internal" href="../90/references.html#id28" title="Dmitri I. Svergun, Michel H. J. Koch, Peter A. Timmins, and Roland P. May. Small Angle X-Ray and Neutron Scattering from Solutions of Biological Macromolecules. Oxford University Press, 08 2013. ISBN 9780199639533. URL: https://doi.org/10.1093/acprof:oso/9780199639533.001.0001, doi:10.1093/acprof:oso/9780199639533.001.0001.">SKTM13</a>]</span> or <span id="id3">[<a class="reference internal" href="../90/references.html#id29" title="Eaton E. Lattman, Thomas D. Grant, and Edward H. Snell. Biological Small Angle Scattering: Theory and Practice. Oxford University Press, 07 2018. ISBN 9780199670871. URL: https://doi.org/10.1093/oso/9780199670871.001.0001, doi:10.1093/oso/9780199670871.001.0001.">LGS18</a>]</span> for details.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>We take this relation for granted in this book and will not give details any further,
+although we will show how to use this relation to understand SAXS.
+See <span id="id1">[<a class="reference internal" href="../90/references.html#id27" title="L.A. Feigin and D.I. Svergun. Structure Analysis by Small-Angle X-Ray and Neutron Scattering. Springer US, 1987. ISBN 9780306426292. URL: https://books.google.co.jp/books?id=q0iqQgAACAAJ.">FS87</a>]</span>, <span id="id2">[<a class="reference internal" href="../90/references.html#id28" title="Dmitri I. Svergun, Michel H. J. Koch, Peter A. Timmins, and Roland P. May. Small Angle X-Ray and Neutron Scattering from Solutions of Biological Macromolecules. Oxford University Press, 08 2013. ISBN 9780199639533. URL: https://doi.org/10.1093/acprof:oso/9780199639533.001.0001, doi:10.1093/acprof:oso/9780199639533.001.0001.">SKTM13</a>]</span> or <span id="id3">[<a class="reference internal" href="../90/references.html#id29" title="Eaton E. Lattman, Thomas D. Grant, and Edward H. Snell. Biological Small Angle Scattering: Theory and Practice. Oxford University Press, 07 2018. ISBN 9780199670871. URL: https://doi.org/10.1093/oso/9780199670871.001.0001, doi:10.1093/oso/9780199670871.001.0001.">LGS18</a>]</span> for details.</p>
+</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sys</span>
@@ -403,21 +409,59 @@ and its reciprocal space whose spherical average correspond to the scattering cu
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">AssertionError</span><span class="g g-Whitespace">                            </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">5</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="sa">r</span><span class="s2">&quot;D:\Github\molass-library&quot;</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="kn">from</span> <span class="nn">molass</span> <span class="kn">import</span> <span class="n">get_version</span>
+<span class="ne">----&gt; </span><span class="mi">5</span> <span class="k">assert</span> <span class="n">get_version</span><span class="p">(</span><span class="n">toml_only</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="s2">&quot;0.0.9&quot;</span><span class="p">,</span> <span class="s2">&quot;Please update molass to the latest version&quot;</span>
+
+<span class="nn">File C:\Program Files\Python312\Lib\site-packages\molass\__init__.py:51,</span> in <span class="ni">get_version</span><span class="nt">(toml_only)</span>
+<span class="g g-Whitespace">     </span><span class="mi">20</span> <span class="k">def</span> <span class="nf">get_version</span><span class="p">(</span><span class="n">toml_only</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+<span class="g g-Whitespace">     </span><span class="mi">21</span><span class="w">     </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="g g-Whitespace">     </span><span class="mi">22</span><span class="sd">     Retrieve the version of the package from pyproject.toml or importlib.metadata.</span>
+<span class="g g-Whitespace">     </span><span class="mi">23</span><span class="sd"> </span>
+<span class="sd">   (...)</span>
+<span class="g g-Whitespace">     </span><span class="mi">49</span><span class="sd">     This docstring was improved in collaboration with GitHub Copilot.</span>
+<span class="g g-Whitespace">     </span><span class="mi">50</span><span class="sd">     &quot;&quot;&quot;</span>
+<span class="ne">---&gt; </span><span class="mi">51</span>     <span class="k">return</span>  <span class="n">_get_version_impl</span><span class="p">(</span><span class="n">toml_only</span><span class="p">,</span> <span class="vm">__file__</span><span class="p">,</span> <span class="n">__package__</span><span class="p">)</span>
+
+<span class="nn">File C:\Program Files\Python312\Lib\site-packages\molass\__init__.py:16,</span> in <span class="ni">_get_version_impl</span><span class="nt">(toml_only, file, package)</span>
+<span class="g g-Whitespace">     </span><span class="mi">13</span>     <span class="k">return</span> <span class="n">pyproject_data</span><span class="p">[</span><span class="s1">&#39;project&#39;</span><span class="p">][</span><span class="s1">&#39;version&#39;</span><span class="p">]</span>
+<span class="g g-Whitespace">     </span><span class="mi">14</span> <span class="k">else</span><span class="p">:</span>
+<span class="g g-Whitespace">     </span><span class="mi">15</span>     <span class="c1"># Otherwise, use importlib.metadata to get it from the installed package</span>
+<span class="ne">---&gt; </span><span class="mi">16</span>     <span class="k">assert</span> <span class="n">toml_only</span> <span class="ow">is</span> <span class="kc">False</span><span class="p">,</span> <span class="s2">&quot;toml_only is not expected in this context&quot;</span>
+<span class="g g-Whitespace">     </span><span class="mi">17</span>     <span class="kn">import</span> <span class="nn">importlib.metadata</span>
+<span class="g g-Whitespace">     </span><span class="mi">18</span>     <span class="k">return</span> <span class="n">importlib</span><span class="o">.</span><span class="n">metadata</span><span class="o">.</span><span class="n">version</span><span class="p">(</span><span class="n">package</span><span class="p">)</span>
+
+<span class="ne">AssertionError</span>: toml_only is not expected in this context
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">molass.SAXS.Simulator</span> <span class="kn">import</span> <span class="n">ElectronDensitySpace</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">molass.Shapes</span> <span class="kn">import</span> <span class="n">Ellipsoid</span>
+<span class="kn">from</span> <span class="nn">molass.DensitySpace</span> <span class="kn">import</span> <span class="n">VoxelSpace</span>
+<span class="kn">from</span> <span class="nn">molass.SAXS.Simulator</span> <span class="kn">import</span> <span class="n">compute_saxs</span><span class="p">,</span> <span class="n">draw_saxs</span>
 
-<span class="n">N</span><span class="o">=</span> <span class="mi">32</span>
-<span class="n">density</span> <span class="o">=</span> <span class="n">ElectronDensitySpace</span><span class="p">(</span><span class="n">N</span><span class="o">=</span><span class="n">N</span><span class="p">)</span>
-<span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span> <span class="o">=</span> <span class="n">density</span><span class="o">.</span><span class="n">get_meshgrid</span><span class="p">()</span>
-<span class="n">c</span> <span class="o">=</span> <span class="n">N</span><span class="o">//</span><span class="mi">2</span>
-<span class="n">density</span><span class="o">.</span><span class="n">draw_saxs</span><span class="p">((</span><span class="n">x</span> <span class="o">-</span> <span class="n">c</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="p">(</span><span class="n">y</span> <span class="o">-</span> <span class="n">c</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="p">(</span><span class="n">z</span> <span class="o">-</span> <span class="n">c</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">ellipsoid</span> <span class="o">=</span> <span class="n">Ellipsoid</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="n">space</span> <span class="o">=</span> <span class="n">VoxelSpace</span><span class="p">(</span><span class="mi">32</span><span class="p">,</span> <span class="n">ellipsoid</span><span class="p">)</span>
+<span class="n">saxs</span> <span class="o">=</span> <span class="n">compute_saxs</span><span class="p">(</span><span class="n">space</span><span class="o">.</span><span class="n">rho</span><span class="p">)</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">draw_saxs</span><span class="p">(</span><span class="n">saxs</span><span class="p">);</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/bae6b6aab977166bc1da4d756a9cd872463dcf6fb595cec234a3a75c7cd7392c.png" src="../../_images/bae6b6aab977166bc1da4d756a9cd872463dcf6fb595cec234a3a75c7cd7392c.png" />
+<img alt="../../_images/fcdf62b49b9c3d4527dd203a16e1c567698c6f25f9dc0dcbbfae4b64a400620d.png" src="../../_images/fcdf62b49b9c3d4527dd203a16e1c567698c6f25f9dc0dcbbfae4b64a400620d.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># fig.savefig(&quot;saxs-1.png&quot;)</span>
+</pre></div>
+</div>
 </div>
 </div>
 </section>
@@ -487,7 +531,7 @@ and its reciprocal space whose spherical average correspond to the scattering cu
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mathematical-relation-between-an-object-and-its-scattering-curve">8.1. Mathematical Relation between an Object and its Scattering Curve</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mathematical-relation-between-particles-and-its-scattering-curve">8.1. Mathematical Relation between Particles and its Scattering Curve</a></li>
 </ul>
   </nav></div>
 

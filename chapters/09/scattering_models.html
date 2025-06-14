@@ -401,7 +401,19 @@ document.write(`
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sys</span>
 <span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="sa">r</span><span class="s1">&#39;D:\Github\molass-library&#39;</span><span class="p">)</span>
 <span class="kn">from</span> <span class="nn">molass</span> <span class="kn">import</span> <span class="n">get_version</span>
-<span class="k">assert</span> <span class="n">get_version</span><span class="p">()</span> <span class="o">&gt;=</span> <span class="s1">&#39;0.0.6&#39;</span>
+<span class="k">assert</span> <span class="n">get_version</span><span class="p">()</span> <span class="o">&gt;=</span> <span class="s1">&#39;0.0.9&#39;</span><span class="p">,</span> <span class="s1">&#39;Please update molass to the latest version&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">AssertionError</span><span class="g g-Whitespace">                            </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">4</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="sa">r</span><span class="s1">&#39;D:\Github\molass-library&#39;</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="kn">from</span> <span class="nn">molass</span> <span class="kn">import</span> <span class="n">get_version</span>
+<span class="ne">----&gt; </span><span class="mi">4</span> <span class="k">assert</span> <span class="n">get_version</span><span class="p">()</span> <span class="o">&gt;=</span> <span class="s1">&#39;0.0.9&#39;</span><span class="p">,</span> <span class="s1">&#39;Please update molass to the latest version&#39;</span>
+
+<span class="ne">AssertionError</span>: Please update molass to the latest version
 </pre></div>
 </div>
 </div>
@@ -415,7 +427,7 @@ document.write(`
 <span class="n">q</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mf">0.005</span><span class="p">,</span> <span class="mf">0.7</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
 <span class="n">R</span> <span class="o">=</span> <span class="mi">30</span>
 
-<span class="n">I</span> <span class="o">=</span> <span class="n">homogeneous_sphere</span><span class="p">(</span><span class="n">q</span><span class="p">,</span> <span class="n">R</span><span class="p">)</span>
+<span class="n">I</span> <span class="o">=</span> <span class="n">homogeneous_sphere</span><span class="p">(</span><span class="n">q</span><span class="p">,</span> <span class="n">R</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span>
 <span class="n">fig</span><span class="p">,</span> <span class="p">(</span><span class="n">ax1</span><span class="p">,</span> <span class="n">ax2</span><span class="p">)</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">ncols</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
 <span class="n">ax2</span><span class="o">.</span><span class="n">set_yscale</span><span class="p">(</span><span class="s1">&#39;log&#39;</span><span class="p">)</span>
 <span class="k">for</span> <span class="n">ax</span> <span class="ow">in</span> <span class="n">ax1</span><span class="p">,</span> <span class="n">ax2</span><span class="p">:</span>
@@ -424,7 +436,92 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/1bee7df3b0a7399056526919ec4fed1ea80ecc7ce3537b5db21668252eb158f2.png" src="../../_images/1bee7df3b0a7399056526919ec4fed1ea80ecc7ce3537b5db21668252eb158f2.png" />
+<img alt="../../_images/a9fa60a1d4609f4d11bdebd6179c9b9d89f825173bd1bbf5c0b67a48c8e1839f.png" src="../../_images/a9fa60a1d4609f4d11bdebd6179c9b9d89f825173bd1bbf5c0b67a48c8e1839f.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">molass.Shapes</span> <span class="kn">import</span> <span class="n">Sphere</span>
+<span class="kn">from</span> <span class="nn">molass.DensitySpace</span> <span class="kn">import</span> <span class="n">VoxelSpace</span>
+<span class="kn">from</span> <span class="nn">molass.SAXS.Simulator</span> <span class="kn">import</span> <span class="n">compute_saxs</span>
+
+<span class="n">sphere</span> <span class="o">=</span> <span class="n">Sphere</span><span class="p">(</span><span class="n">radius</span><span class="o">=</span><span class="mf">6.45</span><span class="p">)</span>
+<span class="n">space</span> <span class="o">=</span> <span class="n">VoxelSpace</span><span class="p">(</span><span class="mi">64</span><span class="p">,</span> <span class="n">sphere</span><span class="p">)</span>
+<span class="n">saxs</span> <span class="o">=</span> <span class="n">compute_saxs</span><span class="p">(</span><span class="n">space</span><span class="o">.</span><span class="n">rho</span><span class="p">,</span> <span class="n">q</span><span class="o">=</span><span class="n">q</span><span class="p">)</span>
+
+<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+<span class="n">ax1</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">121</span><span class="p">,</span> <span class="n">projection</span><span class="o">=</span><span class="s1">&#39;3d&#39;</span><span class="p">)</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Electron density&#39;</span><span class="p">)</span>
+<span class="n">space</span><span class="o">.</span><span class="n">plot_as_dots</span><span class="p">(</span><span class="n">ax1</span><span class="p">)</span>
+
+<span class="n">ax2</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">122</span><span class="p">)</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;SAXS intensity&#39;</span><span class="p">)</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">set_yscale</span><span class="p">(</span><span class="s1">&#39;log&#39;</span><span class="p">)</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">q</span><span class="p">,</span> <span class="n">I</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;homogeneous sphere&#39;</span><span class="p">)</span>
+<span class="n">curve</span> <span class="o">=</span> <span class="n">saxs</span><span class="o">.</span><span class="n">get_curve</span><span class="p">()</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">q</span><span class="p">,</span> <span class="n">curve</span><span class="o">.</span><span class="n">y</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;DENSS-like simulation&#39;</span><span class="p">)</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;q (1/Å)&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 0, &#39;q (1/Å)&#39;)
+</pre></div>
+</div>
+<img alt="../../_images/3482b842a85bfffca8a1f94cdae6f529de9ce6203d2039a67d2f662edf8b37d2.png" src="../../_images/3482b842a85bfffca8a1f94cdae6f529de9ce6203d2039a67d2f662edf8b37d2.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">from molass.CurveModels.Scattering.FormFactors import tri_axial_ellipsoid</span>
+<span class="sd">I = tri_axial_ellipsoid(q, 7, 5, 3)**2</span>
+<span class="sd">fig, (ax1, ax2) = plt.subplots(ncols=2, figsize=(10, 5))</span>
+<span class="sd">ax2.set_yscale(&#39;log&#39;)</span>
+<span class="sd">for ax in ax1, ax2:</span>
+<span class="sd">    ax.plot(q, I, label=&#39;homogeneous sphere&#39;)</span>
+<span class="sd">&quot;&quot;&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&quot;\nfrom molass.CurveModels.Scattering.FormFactors import tri_axial_ellipsoid\nI = tri_axial_ellipsoid(q, 7, 5, 3)**2\nfig, (ax1, ax2) = plt.subplots(ncols=2, figsize=(10, 5))\nax2.set_yscale(&#39;log&#39;)\nfor ax in ax1, ax2:\n    ax.plot(q, I, label=&#39;homogeneous sphere&#39;)\n&quot;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">molass.Shapes</span> <span class="kn">import</span> <span class="n">Ellipsoid</span>
+<span class="kn">from</span> <span class="nn">molass.DensitySpace</span> <span class="kn">import</span> <span class="n">VoxelSpace</span>
+<span class="kn">from</span> <span class="nn">molass.SAXS.Simulator</span> <span class="kn">import</span> <span class="n">compute_saxs</span><span class="p">,</span> <span class="n">draw_saxs</span>
+
+<span class="n">ellipsoid</span> <span class="o">=</span> <span class="n">Ellipsoid</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<span class="n">space</span> <span class="o">=</span> <span class="n">VoxelSpace</span><span class="p">(</span><span class="mi">64</span><span class="p">,</span> <span class="n">ellipsoid</span><span class="p">)</span>
+<span class="n">saxs</span> <span class="o">=</span> <span class="n">compute_saxs</span><span class="p">(</span><span class="n">space</span><span class="o">.</span><span class="n">rho</span><span class="p">)</span>
+
+<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+<span class="n">ax1</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">121</span><span class="p">,</span> <span class="n">projection</span><span class="o">=</span><span class="s1">&#39;3d&#39;</span><span class="p">)</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Electron density&#39;</span><span class="p">)</span>
+<span class="n">space</span><span class="o">.</span><span class="n">plot_as_dots</span><span class="p">(</span><span class="n">ax1</span><span class="p">)</span>
+
+<span class="n">ax2</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">122</span><span class="p">)</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;SAXS intensity&#39;</span><span class="p">)</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">set_yscale</span><span class="p">(</span><span class="s1">&#39;log&#39;</span><span class="p">)</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">q</span><span class="p">,</span> <span class="n">I</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;homogeneous sphere&#39;</span><span class="p">)</span>
+<span class="n">curve</span> <span class="o">=</span> <span class="n">saxs</span><span class="o">.</span><span class="n">get_curve</span><span class="p">()</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">q</span><span class="p">,</span> <span class="n">curve</span><span class="o">.</span><span class="n">y</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;DENSS-like simulation&#39;</span><span class="p">)</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;q (1/Å)&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 0, &#39;q (1/Å)&#39;)
+</pre></div>
+</div>
+<img alt="../../_images/cef56c0bb8cbb34e29d40924ea668b8cbe55f19111eb50e6ec9f80b2a789b555.png" src="../../_images/cef56c0bb8cbb34e29d40924ea668b8cbe55f19111eb50e6ec9f80b2a789b555.png" />
 </div>
 </div>
 </section>
