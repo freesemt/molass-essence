@@ -32,4 +32,4 @@ SAXS Illustraion through Fourier Transform of a homogeneous Ellipsoid
 
 We will cover briefly the modeling of scattering curves later in [Chapter 8](chapter_8).
 
-[^3]: `Molass Library` currently does not directly utilize this relation, while `DENSS` {cite:p}`Grant:2018` is an excellent application of its smart use, from which we learned coding for the figure.
+[^3]: `Molass Library` currently does not directly utilize this relation, while `DENSS` {cite:p}`Grant:2018` is an excellent application of its smart use, from which we learned coding for the figures.
