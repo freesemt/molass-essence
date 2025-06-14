@@ -12,7 +12,7 @@ Spectral Curves
 
 In the spectral view of UV absorbance data, they are called absorbance curves. 
 
-The modeling of them is currently beyond our reach because, to the best of our knowledge, no usable models are available[^1]. However, some computational chemistry packages[^2] seem to be able to produce them at least for amino acids, suggesting possibility in the future.
+The modeling of them is currently beyond our reach because, to the best of our knowledge, no usable models are available[^1]. However, some computational chemistry packages[^2] seem to be able to produce them at least for amino acids, suggesting such possibilities in the future.
 
 [^1]: in the sense that you can use easily on personal computers.
 
