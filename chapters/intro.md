@@ -11,9 +11,7 @@ This document describes the theoretical essence of the library. You can read the
 See also as you proceed:
 
 * [Molass Library Tutorial](https://nshimizu0721.github.io/molass-tutorial/) for how to use,
+* [Molass Technical Report](https://freesemt.github.io/molass-technical/) for techincal details,
 * [Molass Library Reference](https://nshimizu0721.github.io/molass-library/) for function reference,
 * [Molass Library Repository](https://github.com/nshimizu0721/molass-library) for source code.
 
-```{tip}
-You can switch between dark and light modes using the toggle button at the upper right corner of any page.
-```
